@@ -5,6 +5,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.GridView;
 
 
@@ -47,5 +49,26 @@ public class MainActivity extends AppCompatActivity {
         mCursor = new CursorPhotos(getContentResolver(), myImageAdapter);
         mCursor.execute();
 
+    }
+
+    // Création de menu et liens entre les items
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.photos:
+                return true;
+            case R.id.sharing:
+                return true;
+            case R.id.hangover:
+                return true;
+        }
+        return false;
     }
 }
