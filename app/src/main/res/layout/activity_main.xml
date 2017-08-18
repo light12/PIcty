@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="fr.pictycompany.picty.MainActivity">
 
-    <GridView
-        android:id="@+id/listPhotos"
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigation"
+        android:animateLayoutChanges="true">
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorBackground"
-        android:columnWidth="90dp"
-        android:numColumns="4"
-        android:verticalSpacing="5dp"
-        android:horizontalSpacing="5dp"
-        android:stretchMode="columnWidth"
-        android:gravity="center"/>
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/colorBackgroundButton"
+        app:itemTextColor="@color/colorTextButton"
+        app:itemIconTint="@color/colorTextButton"
+        app:menu="@menu/navigation" />
 
 </RelativeLayout>

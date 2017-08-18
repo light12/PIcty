@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Picty</string>
-    <string name="app_title_MyPhotos">Mes Photos</string>
-    <string name="app_title_Sharing">Partage</string>
-    <string name="app_title_Hangover">Mode Hangover</string>
+    <string name="app_title_MyPhotos">MES PHOTOS</string>
+    <string name="app_title_Sharing">PARTAGE</string>
+    <string name="app_title_Hangover">MODE HANGOVER</string>
+    <string name="email">Email</string>
+    <string name="password">Mot de Passe</string>
+    <string name="registration">Inscription</string>
+    <string name="connection">Connexion</string>
 </resources>
